@@ -7,17 +7,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
-public class GreetingController {
-
-    @GetMapping("/login")
+public class HomeController {
+    @GetMapping("/home")
     public String showRegistrationForm(Model model) {
         model.addAttribute("user", new User());
-        return "login";
-    }
-
-    @PostMapping("/login")
-    public String registerUser(User user) {
-        return "redirect:/home";
+        return "home";
     }
 
 }
